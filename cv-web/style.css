@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800&display=swap');
+
+:root {
+    --primary: #2563eb;
+    --secondary: #0f172a;
+    --bg-light: #ffffff;
+    --bg-header: #f1f5f9;
+    --text-main: #1e293b;
+    --text-muted: #475569;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f8fafc;
+    color: var(--text-main);
+    line-height: 1.5;
+    -webkit-print-color-adjust: exact;
+}
+
+.cv-wrapper {
+    max-width: 900px;
+    margin: 20px auto;
+    background: #ffffff;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+
+header {
+    background: var(--bg-header);
+    padding: 40px;
+    border-bottom: 4px solid var(--secondary);
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.profile-section {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.photo-frame {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    padding: 3px;
+    background: #e2e8f0;
+    border: 1px solid #cbd5e1;
+}
+
+.profile-photo {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    background: #fff;
+}
+
+.name-titles h1 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 32px;
+    font-weight: 800;
+    letter-spacing: -1px;
+    margin-bottom: 5px;
+    color: var(--secondary);
+}
+
+.role {
+    color: var(--primary);
+    font-weight: 600;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 12px;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #e2e8f0;
+}
+
+.contact-item {
+    font-size: 13px;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.contact-item i {
+    color: var(--primary);
+    width: 16px;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1.8fr 1fr;
+    gap: 30px;
+    padding: 40px;
+}
+
+.section-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--secondary);
+    border-bottom: 1px solid #e2e8f0;
+    padding-bottom: 8px;
+}
+
+.section-title i {
+    color: var(--primary);
+    font-size: 16px;
+}
+
+section {
+    margin-bottom: 35px;
+}
+
+.experience-item {
+    margin-bottom: 25px;
+    position: relative;
+    padding-left: 20px;
+    border-left: 2px solid #e2e8f0;
+}
+
+.exp-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 5px;
+}
+
+.experience-item h3 {
+    font-size: 16px;
+    color: var(--secondary);
+}
+
+.company {
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: var(--text-main);
+}
+
+.date {
+    font-size: 12px;
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
+ul {
+    padding-left: 15px;
+    list-style-type: none;
+}
+
+ul li {
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-bottom: 6px;
+    position: relative;
+}
+
+ul li::before {
+    content: "•";
+    color: var(--primary);
+    position: absolute;
+    left: -15px;
+    font-weight: bold;
+}
+
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.skill-tag {
+    background: #f1f5f9;
+    color: var(--text-main);
+    padding: 5px 12px;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: 600;
+    border: 1px solid #e2e8f0;
+}
+
+.skill-tag.secondary {
+    background: #f8fafc;
+    color: var(--text-muted);
+}
+
+.edu-item h3 {
+    font-size: 14px;
+    margin-bottom: 2px;
+}
+
+.edu-item p {
+    font-size: 13px;
+    color: var(--text-muted);
+}
+
+@media print {
+    body {
+        background-color: white !important;
+    }
+    .cv-wrapper {
+        margin: 0;
+        box-shadow: none;
+        width: 100%;
+    }
+}

@@ -1,0 +1,25 @@
+{
+  "name": "juan-puente-portfolio",
+  "version": "1.0.0",
+  "description": "Professional Web Portfolio and CV of Juan Alberto Puente Aguilar",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx http-server ./",
+    "generate-pdf": "node gen_pdf.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "portfolio",
+    "cv",
+    "frontend",
+    "angular"
+  ],
+  "author": "Juan Alberto Puente Aguilar",
+  "license": "ISC",
+  "dependencies": {
+    "puppeteer": "^22.0.0"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}

@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juan Alberto Puente - Desarrollador Frontend</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Background Particles -->
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- Header -->
+    <header id="header">
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">
+                    <span class="logo-bracket">&lt;</span><span class="logo-letters">JP</span><span class="logo-bracket">/&gt;</span>
+                </a>
+                <div class="nav-links">
+                    <a href="#inicio" class="active">Inicio</a>
+                    <a href="#proyectos">Proyectos</a>
+                    <a href="#experiencia">Experiencia</a>
+                    <a href="#habilidades">Habilidades</a>
+                    <a href="#contacto">Contacto</a>
+                    <!-- Botón de tema -->
+                    <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema">
+                        <i class="fas fa-moon" aria-hidden="true"></i>
+                    </button>
+                </div>
+                <button class="mobile-menu" aria-label="Abrir menú de navegación">
+                    <i class="fas fa-bars" aria-hidden="true"></i>
+                </button>
+            </nav>
+        </div>
+        <!-- Overlay para móvil -->
+        <div class="mobile-overlay"></div>
+    </header>
+
+    <!-- My Section -->
+    <section class="hero" id="inicio">
+        <div class="container">
+            <div class="hero-content">
+                <div class="profile-image-container">
+                    <img src="images/profile.png" alt="Foto de perfil de Juan Alberto Puente Aguilar" class="profile-image" width="200" height="200">
+                </div>
+                <h1>Juan Alberto Puente Aguilar</h1>
+                <p class="hero-subtitle">Senior Frontend Developer | Angular & QA Automation</p>
+                <p class="hero-summary">8+ años de experiencia desarrollando aplicaciones enterprise escalables con Angular, integración de microservicios y enfoque en calidad de software.</p>
+                <div class="hero-actions">
+                    <a href="#proyectos" class="btn">Ver Proyectos <i class="fas fa-arrow-down" aria-hidden="true"></i></a>
+                    <a href="#contacto" class="btn btn-outline">Contáctame <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="proyectos">
+        <div class="container">
+            <div class="section-title">
+                <h2>Proyectos Destacados</h2>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card" data-project="intelisis">
+                    <div class="project-image">
+                        <img src="images/intelisis_erp_hd.png" alt="Interfaz de Intelisis Web ERP" loading="lazy">
+                    </div>
+                    <div class="project-content">
+                        <h3>Intelisis Web</h3>
+                        <p>Desarrollo frontend con AngularJS 1.8.3 y integración de microservicios para sistema ERP empresarial.</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">AngularJS</span>
+                            <span class="tech-tag">Chart.js</span>
+                            <span class="tech-tag">DevExpress</span>
+                            <span class="tech-tag">Node.js</span>
+                        </div>
+                        <a href="javascript:void(0)" class="project-link" aria-label="Ver detalles de Intelisis Web">Ver detalles <i class="fas fa-external-link-alt" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+                <div class="project-card" data-project="pos-fashion">
+                    <div class="project-image">
+                        <img src="images/pos_fashion_hd.png" alt="Interfaz de POS Fashion Point of Sale" loading="lazy">
+                    </div>
+                    <div class="project-content">
+                        <h3>POS Fashion</h3>
+                        <p>Módulo de punto de venta especializado para industria de la moda con interfaz optimizada.</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">SQL Server</span>
+                            <span class="tech-tag">SDK Intelisis</span>
+                        </div>
+                        <a href="javascript:void(0)" class="project-link" aria-label="Ver detalles de POS Fashion">Ver detalles <i class="fas fa-external-link-alt" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+                <div class="project-card" data-project="alivean">
+                    <div class="project-image">
+                        <img src="images/medical_alivean_hd.png" alt="Interfaz de Sistema Médico Alivean" loading="lazy">
+                    </div>
+                    <div class="project-content">
+                        <h3>Sistema Médico Alivean</h3>
+                        <p>Aplicación de consultas y cotizaciones médicas con microservicios y portal administrativo.</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">MySQL</span>
+                            <span class="tech-tag">APIs REST</span>
+                            <span class="tech-tag">JavaScript</span>
+                        </div>
+                        <a href="javascript:void(0)" class="project-link" aria-label="Ver detalles de Sistema Médico Alivean">Ver detalles <i class="fas fa-external-link-alt" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experiencia">
+        <div class="container">
+            <div class="section-title">
+                <h2>Experiencia Profesional</h2>
+            </div>
+            <div class="experience-timeline">
+                <div class="experience-item">
+                    <div class="experience-icon">
+                        <i class="fas fa-laptop-code" aria-hidden="true"></i>
+                    </div>
+                    <div class="experience-content">
+                        <div class="experience-header">
+                            <div>
+                                <div class="experience-role">Desarrollador Frontend Senior</div>
+                                <div class="experience-company">Intelisis Software</div>
+                            </div>
+                            <div class="experience-date">Nov 2020 - Actual</div>
+                        </div>
+                        <ul class="achievements-list">
+                            <li>Desarrollo de Intelisis Web, integración Chart.js, Calendar.io, Angular Material y DevExpress.</li>
+                            <li>Análisis de requerimientos funcionales para soluciones probables con Jasmine/Karma.</li>
+                            <li>Análisis de deuda técnica con SonarQube y despliegue de portales para clientes.</li>
+                            <li><strong>Logro clave:</strong> Reduje incidencias promedio reportadas por QA en 40% desde el primer año.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="experience-item">
+                    <div class="experience-icon">
+                        <i class="fas fa-server" aria-hidden="true"></i>
+                    </div>
+                    <div class="experience-content">
+                        <div class="experience-header">
+                            <div>
+                                <div class="experience-role">Desarrollador Fullstack</div>
+                                <div class="experience-company">Alivean S.A. de C.V.</div>
+                            </div>
+                            <div class="experience-date">Nov 2019 - Jun 2020</div>
+                        </div>
+                        <ul class="achievements-list">
+                            <li>Microservicios Node.js para aplicación médica y validación de endpoints REST.</li>
+                            <li>Portal administrativo con catálogos y liderazgo en pruebas de integración.</li>
+                            <li><strong>Logro clave:</strong> Incrementé la efectividad de la aplicación del 50% al 97% en 1.5 meses mediante pruebas continuas.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="experience-item">
+                    <div class="experience-icon">
+                        <i class="fas fa-mobile-alt" aria-hidden="true"></i>
+                    </div>
+                    <div class="experience-content">
+                        <div class="experience-header">
+                            <div>
+                                <div class="experience-role">Desarrollador Frontend Junior</div>
+                                <div class="experience-company">Intelisis Software</div>
+                            </div>
+                            <div class="experience-date">Sep 2018 - Oct 2019</div>
+                        </div>
+                        <ul class="achievements-list">
+                            <li>Diseño y desarrollo de módulo POS Fashion con SDK Intelisis, utilizado por más de 100 empresas.</li>
+                            <li>Pruebas funcionales y de usabilidad en entornos reales de punto de venta.</li>
+                            <li>Producto estrella desarrollado y probado exitosamente en 2.5 meses.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="habilidades">
+        <div class="container">
+            <div class="section-title">
+                <h2>Habilidades Técnicas</h2>
+            </div>
+            <div class="tech-stack-grid">
+                <div class="tech-category">
+                    <h4><i class="fas fa-paint-brush" aria-hidden="true"></i> Frontend & UI</h4>
+                    <div class="tags-container">
+                        <span class="tech-badge">Angular</span>
+                        <span class="tech-badge">TypeScript</span>
+                        <span class="tech-badge">JavaScript ES6+</span>
+                        <span class="tech-badge">RxJS</span>
+                        <span class="tech-badge">HTML5 & CSS3</span>
+                        <span class="tech-badge">Responsive Design</span>
+                        <span class="tech-badge">Angular Material</span>
+                        <span class="tech-badge">DevExpress</span>
+                    </div>
+                </div>
+                <div class="tech-category">
+                    <h4><i class="fas fa-server" aria-hidden="true"></i> Backend & Bases de Datos</h4>
+                    <div class="tags-container">
+                        <span class="tech-badge">Node.js</span>
+                        <span class="tech-badge">Express.js</span>
+                        <span class="tech-badge">REST Integrations</span>
+                        <span class="tech-badge">MS SQL Server</span>
+                        <span class="tech-badge">MySQL</span>
+                    </div>
+                </div>
+                <div class="tech-category">
+                    <h4><i class="fas fa-tools" aria-hidden="true"></i> Herramientas & DevOps</h4>
+                    <div class="tags-container">
+                        <span class="tech-badge">GitLab</span>
+                        <span class="tech-badge">CI/CD</span>
+                        <span class="tech-badge">SonarQube</span>
+                        <span class="tech-badge">Jasmine / Karma</span>
+                        <span class="tech-badge">Scrum</span>
+                        <span class="tech-badge">n8n</span>
+                    </div>
+                </div>
+                <div class="tech-category">
+                    <h4><i class="fas fa-brain" aria-hidden="true"></i> Soft Skills</h4>
+                    <div class="tags-container">
+                        <span class="soft-badge">Análisis Funcional</span>
+                        <span class="soft-badge">Toma de Decisiones</span>
+                        <span class="soft-badge">Comunicación Asertiva</span>
+                        <span class="soft-badge">Mentoría</span>
+                        <span class="soft-badge">Estimaciones</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="educacion" class="bg-alt">
+        <div class="container">
+            <div class="section-title">
+                <h2>Educación e Idiomas</h2>
+            </div>
+            <div class="education-grid">
+                <div class="edu-card">
+                    <div class="edu-icon"><i class="fas fa-graduation-cap" aria-hidden="true"></i></div>
+                    <div class="edu-info">
+                        <h3>Licenciatura en Informática</h3>
+                        <p class="edu-institution">Universidad Insurgentes Plantel Sur 1, CDMX</p>
+                        <p class="edu-date">2016 - 2019</p>
+                    </div>
+                </div>
+                <div class="edu-card">
+                    <div class="edu-icon"><i class="fas fa-language" aria-hidden="true"></i></div>
+                    <div class="edu-info">
+                        <h3>Inglés</h3>
+                        <p class="edu-level">Nivel Intermedio (B2)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacto">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contacto</h2>
+            </div>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Hablemos</h3>
+                    <p>Estoy disponible para proyectos freelance, colaboraciones o nuevas oportunidades laborales. Envíame un mensaje y te responderé lo antes posible.</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope" aria-hidden="true"></i>
+                            <span>juan.alberto.puente.aguilar@gmail.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone" aria-hidden="true"></i>
+                            <span>+52 55 1825 9484</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                            <span>Ciudad de México, México</span>
+                        </div>
+                    </div>
+                    <a href="./docs/CV_Juan_Alberto_Puente.pdf" download="CV_Juan_Alberto_Puente.pdf" class="btn btn-outline" id="download-cv-btn">
+                        <i class="fas fa-download" aria-hidden="true"></i> Descargar CV
+                    </a>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm" action="https://formspree.io/f/mwvypryd" method="POST">
+                        <div class="form-group">
+                            <label for="name" class="visually-hidden">Nombre</label>
+                            <input type="text" id="name" name="name" class="form-control" placeholder="Nombre" autocomplete="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="visually-hidden">Email</label>
+                            <input type="email" id="email" name="email" class="form-control" placeholder="Email" autocomplete="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject" class="visually-hidden">Asunto</label>
+                            <input type="text" id="subject" name="subject" class="form-control" placeholder="Asunto" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message" class="visually-hidden">Mensaje</label>
+                            <textarea id="message" name="message" class="form-control" placeholder="Mensaje" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-submit">Enviar Mensaje <i class="fas fa-paper-plane" aria-hidden="true"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/juanalbertopuenteaguilar" class="social-link" target="_blank" aria-label="Perfil de LinkedIn">
+                    <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+                </a>
+                <a href="https://github.com/puenteaguilar77" class="social-link" target="_blank" aria-label="Perfil de GitHub">
+                    <i class="fab fa-github" aria-hidden="true"></i>
+                </a>
+            </div>
+            <p class="copyright">&copy; 2025 Juan Alberto Puente Aguilar. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Project Modal -->
+    <div class="modal" id="projectModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modalTitle">Detalles del Proyecto</h3>
+                <button class="modal-close" aria-label="Cerrar detalles del proyecto">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="gallery" id="projectGallery">
+                </div>
+                <div id="projectDescription">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Librerías de terceros -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <script src="scriptportfolio.js"></script>
+</body>
+</html>
