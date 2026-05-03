@@ -254,32 +254,63 @@ function isElementInViewport(el) {
 window.addEventListener('scroll', animateSkills);
 window.addEventListener('load', animateSkills);
 
-// Formulario de contacto
+// Formulario de contacto - Seguridad Pro
 const contactForm = document.getElementById('contactForm');
+const endpoint = atob('aHR0cHM6Ly9mb3Jtc3ByZWUuaW8vZi9td3Z5cHJ5ZA==');
+
+function sanitizeInput(str) {
+    const div = document.createElement('div');
+    div.textContent = str;
+    return div.innerHTML;
+}
+
 contactForm.addEventListener('submit', async (e) => {
     e.preventDefault();
+    
+    // Honeypot check
+    const gotcha = contactForm.querySelector('input[name="_gotcha"]').value;
+    if (gotcha) return;
+
     const submitBtn = contactForm.querySelector('.btn-submit');
     const originalText = submitBtn.innerHTML;
+    
+    // Feedback visual inmediato
     submitBtn.innerHTML = 'Enviando... <i class="fas fa-spinner fa-spin"></i>';
     submitBtn.disabled = true;
 
     try {
-        const response = await fetch(contactForm.action, {
+        const formData = new FormData(contactForm);
+        const data = {};
+        formData.forEach((value, key) => {
+            if (key !== '_gotcha') {
+                data[key] = sanitizeInput(value);
+            }
+        });
+
+        const response = await fetch(endpoint, {
             method: 'POST',
-            body: new FormData(contactForm),
+            body: JSON.stringify(data),
             headers: {
-                'Accept': 'application/json'
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
             }
         });
         
         if (response.ok) {
-            alert('¡Gracias por tu mensaje! Me pondré en contacto contigo pronto.');
+            // Éxito
+            const successMsg = document.createElement('div');
+            successMsg.className = 'form-success-alert';
+            successMsg.innerHTML = '<i class="fas fa-check-circle"></i> ¡Mensaje enviado con éxito!';
+            contactForm.appendChild(successMsg);
             contactForm.reset();
+            
+            setTimeout(() => successMsg.remove(), 5000);
         } else {
-            alert('Hubo un problema al enviar el formulario. Por favor, intenta nuevamente.');
+            throw new Error('Server responded with error');
         }
     } catch (error) {
-        alert('Hubo un problema al enviar el formulario. Por favor, intenta nuevamente.');
+        console.error('Error al enviar:', error);
+        alert('Hubo un problema al enviar el formulario. Por favor, verifica tu conexión e intenta nuevamente.');
     } finally {
         submitBtn.innerHTML = originalText;
         submitBtn.disabled = false;
