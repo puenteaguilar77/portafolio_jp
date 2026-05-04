@@ -1,6 +1,6 @@
 # Portafolio Profesional - Juan Alberto Puente Aguilar
 
-Este proyecto contiene el portafolio profesional y CV web de Juan Alberto Puente Aguilar, Senior Frontend Developer especializado en Angular y QA Automation.
+Este proyecto contiene el portafolio profesional y CV web de Juan Alberto Puente Aguilar, Frontend Developer especializado en Angular y QA Automation.
 
 ## 🚀 Tecnologías Utilizadas
 
@@ -54,7 +54,7 @@ npm install
 ## 👤 Autor
 
 *   **Nombre**: Juan Alberto Puente Aguilar
-*   **Rol**: Senior Frontend Developer
+*   **Rol**: Frontend Developer
 *   **Contacto**: juan.alberto.puente.aguilar@gmail.com
 *   **LinkedIn**: [linkedin.com/in/juanalbertopuenteaguilar](https://www.linkedin.com/in/juanalbertopuenteaguilar)
 
